@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Manet Lawn International Club—Manet Meadow</title>
+<link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<link href="../css/masu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="../js/jquery/slides.min.jquery.js"></script>
+<script type="text/javascript" src="../js/manai.js"></script>
+<script language="javascript">
+(function($){
+	$(document).ready(function(){
+		$("div[id^=href]").each(function(){
+			var id=$(this).attr("id").substring(4);
+			$(this).find(".slides_container a").attr("imggroup", id);
+		});
+		setPage2($("#activityUI"), $("div[id^=href]"), 175);
+		$(".slides_container img").show();
+		$(".btn").bind("click", function(){
+			$("#activityDiv").hide();
+			var id = $(this).parents("div[id^=href]").attr("id");
+			var index = id.substring(4,5);
+			setbigImgDiv(index-1);
+			return false;
+		});
+	});
+})(jQuery);
+</script>
+<style>
+.laye3rnew .icoleft, .laye3rnew  .icoleft_no {right: 305px;}
+.laye3rnew  .icoright, .laye3rnew  .icoright_no  {right: 75px;}
+</style>
+</head>
+<body>
+<div id="body" style="height:700px; overflow:hidden"> 
+<img id="backgroupdImg" style="position:absolute; left:0; bottom:0; z-index:-30" src="images/bg.jpg" width="100%" />
+<div class="wid_1050 object">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1050" height="360">
+	  <param name="movie" value="../img/nav_en.swf" />
+	  <param name="wmode" value="transparent">
+	<param name="allowScriptAccess" value="sameDomain" />
+	  <embed src="../img/nav_en.swf" quality="high" allowScriptAccess="sameDomain" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="1050" height="360"></embed>
+	</object>
+</div>
+<div class="top"></div>
+
+<div class="wid_950">
+<div id="activityDiv" class="layer layer_3 laye3rnew">
+	<div class="layleft1 xian" style="width: 180px;">
+		<h2 style="height:18px"></h2>
+		<div class="content1">
+			<ul id="activityUI">
+				<li><a pos="1" href="#">Courtyard</a></li>
+				<li><a pos="2" href="#">Willow Yard</a></li>
+				<li><a pos="3" href="#">Manet Meadow</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="href1">
+		<div class="content2 xian flo_l">
+		<div name="scroll">
+			<p>The unique skyline makes the garden in the courtyard look exquisite and elegant. It is an ideal spot for receptions,mini-conferences, small evening parties and various kinds of themed outdoor activities.</p>
+		</div>
+		</div>
+		<div class="content_img flo_l">
+			<span name="icoleft" class="icoleft"></span>
+			<div name="slides" class="lb_img" style="overflow:hidden;">
+				<div class="slides_container">
+					<a href="#"><img src="images/content/4/1/220/220_1.jpg" class="imgwidth220" /></a>
+				</div>
+			</div>
+			<span name="icoright" class="icoright"></span>
+		</div>
+	</div>
+	<div id="href2" style="display:none">
+		<div class="content2 xian flo_l">
+		<div name="scroll" style="overflow:hidden">
+			<p>Surrounded with green willows, the yard lies on a gentle slope by the river. This is the most suitable places for a variety of tasteful outdoor activities and BBQ theme parties. </p>
+			<p>The yard covers an area of 416㎡(16m*26m). The layout and capacity are listed below: Reception--120 persons; Theatre --100 persons; Banquet--80 persons; Classroom--60 persons; Board--60 persons; Hollow Square--60 persons; U-shape--60 persons.</p>
+		</div>
+		</div>
+		<div class="content_img flo_l">
+			<span name="icoleft" class="icoleft"></span>
+			<div name="slides" class="lb_img" style="overflow:hidden;height:auto;">
+				<div class="slides_container">
+					<a href="#"><img src="images/content/4/2/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/4/2/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+				</div>
+			</div>
+			<span name="icoright" class="icoright"></span>
+		</div>
+	</div>
+	<div id="href3" style="display:none">
+		<div class="content2 xian flo_l">
+		<div name="scroll" style="overflow:hidden">
+			<p>Green meadow, gentle slopes, forest, away from the hustle and bustle of metropolis, here you can embrace the nature with your whole heart. Bask in the warm sunshine; hear the birdlings twitter and cicadas sing. You slow down your step and take a deep breath. The sweetness of the air and the fragrance of the plants make u cast aside all your worries. You can't help opening your heart to such special greenness and serenity. Here you can hold various theme weddings, large conferences and themed outdoor activities. </p>
+			<p>Manet Meadow covers an area of 7000㎡. The layout and capacity are listed below: Reception--120 persons; Theatre --80 persons; Banquet--80 persons; Board--50 persons; Hollow Square--50 persons; U-shape--50 persons.</p>
+		</div>
+		</div>
+		<div class="content_img flo_l">
+			<span name="icoleft" class="icoleft"></span>
+			<div name="slides" class="lb_img" style="overflow:hidden;">
+				<div class="slides_container">
+					<a href="#"><img src="images/content/4/3/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/4/3/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+				</div>
+			</div>
+			<span name="icoright" class="icoright"></span>
+		</div>
+	</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="bottom">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="950" height="40">
+	<param name="movie" value="../img/bottom_en.swf" />
+	<param name="wmode" value="transparent">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<embed src="../img/bottom_en.swf" quality="high" allowScriptAccess="sameDomain"  pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="950" height="40"></embed>
+  </object>
+</div>
+</div>
+
+<div id="img600_1" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/4/1/600/600_1.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_2" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/4/2/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/4/2/600/600_2.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_3" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/4/3/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/4/3/600/600_2.jpg"/>
+		<span></span>
+	</div>
+</div>
+</body>
+</html>
