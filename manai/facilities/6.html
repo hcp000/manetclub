@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>马奈草地国际俱乐部—健康休闲</title>
+<link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<link href="../css/masu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="../js/jquery/slides.min.jquery.js"></script>
+<script type="text/javascript" src="../js/manai.js"></script>
+<script language="javascript">
+(function($){
+	$(document).ready(function(){
+		$("div[id^=href]").each(function(){
+			var id=$(this).attr("id").substring(4);
+			$(this).find(".slides_container a").attr("imggroup", id);
+		});
+		setPage2($("#leisureUI"),$("div[id^=href]"),175);
+		
+		$("#leisureUI").find("a").bind("click", function(){
+			var current = $(this).attr("pos");
+			if((current == 6) || (current == 7) || (current == 8)){
+				$(".laye3rnew").width(478);
+			}else{
+				$(".laye3rnew").width(788);
+			}
+			var $currentObj = $("div[id=href"+current+"]");
+			return false;
+		});
+		
+		$(".slides_container img").show();
+	});
+})(jQuery);
+</script>
+<style>
+.laye3rnew .icoleft, .laye3rnew  .icoleft_no {right: 305px;}
+.laye3rnew  .icoright, .laye3rnew  .icoright_no  {right: 75px;}
+</style>
+</head>
+<body>
+<div id="body" style="height:700px; overflow:hidden">
+<img id="backgroupdImg" style="position:absolute; left:0; bottom:0; z-index:-30" src="images/bg.jpg" width="100%" />
+<div class="wid_1050 object">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1050" height="360">
+		<param name="movie" value="../img/nav.swf" />
+		<param name="wmode" value="transparent">
+		<param name="allowScriptAccess" value="sameDomain" />
+		<embed src="../img/nav.swf" quality="high" allowScriptAccess="sameDomain" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="1050" height="360"></embed>
+	</object>
+</div>
+<div class="top"></div>
+
+<div class="wid_950">
+	<div class="layer layer_3 laye3rnew">
+		<div class="layleft1 xian" style="width: 180px;">
+			<h2 style="height:18px"></h2>
+			<div class="content1">
+				<ul id="leisureUI">
+					<li><a pos="1" href="#">健身中心</a></li>
+					<li><a pos="2" href="#">Spa</a></li>
+					<li><a pos="3" href="#">模拟高尔夫</a></li>
+					<li><a pos="4" href="#">儿童活动中心</a></li>
+					<li><a pos="5" href="#">斯诺克厅</a></li>
+					<li><a pos="6" href="#">棋牌室</a></li>
+					<li><a pos="7" href="#">美发美甲沙龙</a></li>
+					<li><a pos="8" href="#">多功能娱乐厅</a></li>
+					<li><a pos="9" href="#">私人影院</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="href1">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>近3000m²的健身中心拥有独立跳操房、乒乓球室、力量区、器械区及游泳馆（10m*25m）。拥有国际专业认证的专业私人教练及健康顾问将随时为您提供指导与帮助，为您量身定制健康计划。</p>
+				<p>营业时间：7:00 – 22:00</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/1/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/1/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/1/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/1/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href2" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>莲Spa拥有豪华双人理疗室、标准双人理疗室、单人理疗室共计十间，睡莲的悠然静雅弥漫于整个空间，专业技师的独特疗法让会员充分放松身心，焕发活力。</p>
+				<p>营业时间：10:00-22:00</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/2/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/2/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/2/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/2/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href3" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>两间模拟高尔夫球练习室拥有最先进的分析仪器，可协助会员进行更好的高尔夫模拟训练。</p>
+				<p>营业时间:7:00-22:00</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/3/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/3/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href4" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>150 m²设计安全贴心的儿童活动中心是您陪伴孩子共同成长的快乐空间。</p>
+				<p>营业时间：10:00-19:00</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/4/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/4/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href5" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>配备全进口的专业斯诺克球台，让您与友人尽享竞技的乐趣。</p>
+				<p>营业时间：10:00-22:00</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/5/220/220_1.jpg" class="imgwidth220" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href6" style="display:none">
+			<div class="content2 flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>三间多功能棋牌室设备先进，拥有宽敞的休息区，是三五好友切技艺、闲谈小聚的理想场所。</p>
+				<p>营业时间：10：00-凌晨2：00</p>
+			</div>
+			</div>
+			<!--
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/6/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/6/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/6/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/6/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+			-->
+		</div>
+		<div id="href7" style="display:none;">
+			<div class="content2 flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>精致舒适的空间为您提供最为专业、个性化的服务。</p>
+				<p>营业时间：10:00-22:00</p>
+			</div>
+			</div>
+			<!--
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/7/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/7/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/7/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/7/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+			-->
+		</div>
+		<div id="href8" style="display:none;">
+			<div class="content2 flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>配有高品质的音效设备，独享私人会客厅的舒适氛围。</p>
+				<p>营业时间：20：00至凌晨2：00</p>
+			</div>
+			</div>
+			<!--
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/8/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/8/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/8/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/8/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+			-->
+		</div>
+		<div id="href9" style="display:none;">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>人生尽在光影中。马奈奢华打造私密性小型影院。只为您预留门票。</p>
+				<p>94 m²的私人影院，可容纳9-12位会员。您可在此怀旧经典，鉴赏最新影视作品，亦可举办小型发布会、私人观影聚会等活动。</p>
+				<p>营业时间：11：00-21：00</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/9/220/220_1.jpg" class="imgwidth220" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+		  </div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="bottom">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="950" height="40">
+		<param name="movie" value="../img/bottom.swf" />
+		<param name="wmode" value="transparent">
+		<param name="allowScriptAccess" value="sameDomain" />
+	<embed src="../img/bottom.swf" quality="high" allowScriptAccess="sameDomain"  pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="950" height="40"></embed>
+	</object>
+</div>
+</div>
+
+<div id="img600_1" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_2" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_3" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/3/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/3/600/600_2.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_4" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/4/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/4/600/600_2.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_5" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/5/600/600_1.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_6" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_7" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_8" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_9" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/9/600/600_1.jpg"/>
+		<span></span>
+	</div>
+</div>
+</body>
+</html>

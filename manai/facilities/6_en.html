@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Manet Lawn International Club—Fitness and Leisure</title>
+<link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<link href="../css/masu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="../js/jquery/slides.min.jquery.js"></script>
+<script type="text/javascript" src="../js/manai.js"></script>
+<script language="javascript">
+(function($){
+	$(document).ready(function(){
+		$("div[id^=href]").each(function(){
+			var id=$(this).attr("id").substring(4);
+			$(this).find(".slides_container a").attr("imggroup", id);
+		});
+		setPage2($("#leisureUI"),$("div[id^=href]"),175);
+		
+		$("#leisureUI").find("a").bind("click", function(){
+			var current = $(this).attr("pos");
+			if((current == 6) || (current == 7) || (current == 8)){
+				$(".laye3rnew").width(478);
+			}else{
+				$(".laye3rnew").width(788);
+			}
+			var $currentObj = $("div[id=href"+current+"]");
+			return false;
+		});
+		
+		$(".slides_container img").show();
+	});
+})(jQuery);
+</script>
+<style>
+.laye3rnew .icoleft, .laye3rnew  .icoleft_no {right: 305px;}
+.laye3rnew  .icoright, .laye3rnew  .icoright_no  {right: 75px;}
+</style>
+</head>
+<body>
+<div id="body" style="height:700px; overflow:hidden">
+<img id="backgroupdImg" style="position:absolute; left:0; bottom:0; z-index:-30" src="images/bg.jpg" width="100%" />
+<div class="wid_1050 object">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1050" height="360">
+		<param name="movie" value="../img/nav_en.swf" />
+		<param name="wmode" value="transparent">
+		<param name="allowScriptAccess" value="sameDomain" />
+		<embed src="../img/nav_en.swf" quality="high" allowScriptAccess="sameDomain" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="1050" height="360"></embed>
+	</object>
+</div>
+<div class="top"></div>
+
+<div class="wid_950">
+	<div class="layer layer_3 laye3rnew">
+		<div class="layleft1 xian" style="width: 180px;">
+			<h2 style="height:18px"></h2>
+			<div class="content1">
+				<ul id="leisureUI">
+					<li><a pos="1" href="#">Fitness Center</a></li>
+					<li><a pos="2" href="#">Lotus Spa</a></li>
+					<li><a pos="3" href="#">SimGolf</a></li>
+					<li><a pos="4" href="#">Children's Recreation Center</a></li>
+					<li><a pos="5" href="#">Snooker Hall</a></li>
+					<li><a pos="6" href="#">Chess &Cards Room</a></li>
+					<li><a pos="7" href="#">Hair & Manicure Salon</a></li>
+					<li><a pos="8" href="#">Multifunctional Entertainment Hall••••••</a></li>
+					<li><a pos="9" href="#">Private Theatre</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="href1">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>Covering about 3000 ㎡, the Fitness Center is equipped with all modern recreational facilities, such as aerobics studios, table tennis rooms, strength training area, body building area, indoor swimming pool(10m*25m),etc. Professional private instructors certified by International Association of Professionals and health consultant will be ready to provide valuable guidance to you and make you tailored health plan.</p>
+				<p>Opening Hours：7:00am--22:00pm</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/1/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/1/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/1/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/1/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href2" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>The Lotus Spa has ten therapy rooms, including deluxe double therapy rooms, standard double therapy rooms and single therapy rooms. Immersed in the elegance and serenity of lotus, the club members may get full relaxation and refreshment under unique Spa treatment of the therapists in a leisure atmosphere. </p>
+				<p>Opening Hours：10:00am--22:00pm</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/2/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/2/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/2/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/2/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href3" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>Two SimGolf driving ranges are equipped with the most advanced analytical instruments, which helps simulate a better golf training process for club members.</p>
+				<p>Opening Hours：7:00am--22:00pm</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/3/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/3/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href4" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>Covering 150㎡, Children's Recreation Center offers a safe and intriguing environment where your and your children can grow together in happiness.</p>
+				<p>Opening Hours：10:00am--19:00pm</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/4/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/4/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href5" style="display:none">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>The hall adopts professional snooker tables, which enable club members to perfect their snooker skills.</p>
+				<p>Opening Hours：10:00am--22:00pm</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/5/220/220_1.jpg" class="imgwidth220" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+		</div>
+		<div id="href6" style="display:none">
+			<div class="content2 flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>Three multifunctional chess&cards rooms are all equipped with advanced facilities. With spacious lounges, it is the best place for friends to get together and play a few rounds of cards.</p>
+				<p>Opening Hours:10:00am--2:00am</p>
+			</div>
+			</div>
+			<!--
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/6/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/6/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/6/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/6/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+			-->
+		</div>
+		<div id="href7" style="display:none;">
+			<div class="content2 flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>Here you can enjoy the most professional hairdressing and other personalized services in a comfortable environment.</p>
+				<p>Opening Hours：10:00am--22:00pm</p>
+			</div>
+			</div>
+			<!--
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/7/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/7/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/7/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/7/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+			-->
+		</div>
+		<div id="href8" style="display:none;">
+			<div class="content2 flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>With high-quality acoustics, a cosy private parlor is reserved for your exclusive use and leisure.</p>
+				<p>Opening Hours：20:00pm--2:00am</p>
+			</div>
+			</div>
+			<!--
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/8/220/220_1.jpg" class="imgwidth220" /></a>
+					<a href="#"><img src="images/content/6/8/220/220_2.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/8/220/220_3.jpg" class="imgwidth220" style="display:none" /></a>
+					<a href="#"><img src="images/content/6/8/220/220_4.jpg" class="imgwidth220" style="display:none" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+			</div>
+			-->
+		</div>
+		<div id="href9" style="display:none;">
+			<div class="content2 xian flo_l">
+			<div name="scroll" style="overflow:hidden">
+				<p>Life should be should be accompanied by good movies. Manet Club owns the most deluxe private theatre. The tickets are only reserved for you.</p>
+				<p>Covering an area of 94㎡, the private theatre can accommodate 9-12 club members. Here, you can savour the old classic movies as well as the lastest blockbusters. You may also hold mini-conferences and private movie parties here. </p>
+				<p>Opening Hours：11:00am--21:00pm</p>
+			</div>
+			</div>
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+					<a href="#"><img src="images/content/6/9/220/220_1.jpg" class="imgwidth220" /></a>
+					</div>
+				</div>
+				<span name="icoright" class="icoright"></span>
+		  </div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="bottom">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="950" height="40">
+		<param name="movie" value="../img/bottom_en.swf" />
+		<param name="wmode" value="transparent">
+		<param name="allowScriptAccess" value="sameDomain" />
+	<embed src="../img/bottom_en.swf" quality="high" allowScriptAccess="sameDomain"  pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="950" height="40"></embed>
+	</object>
+</div>
+</div>
+
+<div id="img600_1" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/1/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_2" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/2/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_3" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/3/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/3/600/600_2.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_4" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/4/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/4/600/600_2.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_5" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/5/600/600_1.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_6" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/6/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_7" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/7/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_8" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_1.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_2.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_3.jpg"/>
+		<span></span>
+	</div>
+	<div>
+		<title></title>
+		<img src="images/content/6/8/600/600_4.jpg"/>
+		<span></span>
+	</div>
+</div>
+<div id="img600_9" style="display:none">
+	<div>
+		<title></title>
+		<img src="images/content/6/9/600/600_1.jpg"/>
+		<span></span>
+	</div>
+</div>
+</body>
+</html>
