@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Manet Lawn International Club—Images</title>
+<link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<link href="../css/masu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../js/jquery/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="../js/jquery/slides.min.jquery.js"></script>
+<script language="javascript">
+(function($){
+	$(window).load(function(){
+		setPage();
+		$(".backgroupdImg").width($(window).width()).show();
+		setGBSLide1();
+	});
+	$(window).resize(function(){
+		$(".backgroupdImg").width($(window).width());
+		setPage();
+	});
+})(jQuery);
+function setPage(){
+	if($("#backgroupdImg").length > 0){
+		setPagenew($(window).width(),$("#backgroupdImg").height(), $("#backgroupdImg"),$("#backgroupdImg"));
+	}else{
+		setPagenew($(window).width(),$(".backgroupdImg").height(), $(".backgroupdImg"), $("#backgroupDiv"), false);
+	}
+}
+
+function setPagenew(imgWidth, imgHeight, $obj, $objFrame, fixflag){
+	var windowHeight = $(window).height();
+	var windowWidth = $(window).width();
+	var setHeight = windowHeight;
+	if(typeof(fixflag) == "undefined"){
+		fixflag = true;
+	}
+	//如果窗口的高度小于750，则计算页面的高度，保证图片在当前屏幕展示
+	if(windowHeight < 750){
+		var imgHeighttmp = windowHeight;
+		if(windowWidth < imgWidth){
+			//如果窗口宽度小于图片宽度，则计算图片在窗口宽度显示时的高度
+			imgHeighttmp = (imgWidth/windowWidth)* windowHeight;
+		}
+		if(imgHeight!=0){
+			if($obj.height() != imgHeight){
+				imgHeighttmp = $obj.height();
+			}else{
+				imgHeighttmp = imgHeight;
+			}
+		}
+		//设置大图片是的绝对位置
+		$objFrame.css({top:"0", bottom:""});
+		//setHeight = imgHeighttmp + 29;
+		//alert(imgHeighttmp);
+		if(imgHeighttmp != 0){
+			if(fixflag){
+				imgHeighttmp = imgHeighttmp-10;
+			}
+			var minHeight = 750;
+			try{
+				//获取当前页面的可能的最小高度=弹窗的位移点+高度（包括边框）
+				minHeight = $(".wid_950 div:eq(0)").offset().top + $(".wid_950 div:eq(0)").outerHeight();
+			}catch(e){
+			}
+			if(minHeight > imgHeighttmp){
+				imgHeighttmp = minHeight + 50;
+				var top = ($(document).height() - imgHeight)/2;
+				$objFrame.css({top:top, left:left});
+			}else{
+				imgHeighttmp = minHeight + 50;
+			}
+			setHeight = imgHeighttmp;
+		}
+	}else{
+		if($obj.css("max-width")!="none"){
+			var maxWidth = 2560;
+			if(windowWidth > maxWidth){
+				var left = (windowWidth-maxWidth)/2;
+				var top = ($(document).height() - imgHeight)/2;
+				$obj.css({top:top, left:left});
+			}
+			setHeight = setHeight+30;
+		}
+	}
+	$("body, #body").height(setHeight);
+}
+/**
+背景图片的切换
+*/
+
+function setGBSLide1(){
+	setGBSLideCor($("#backgroupDiv"),$("span[name=bgicoleft]"),$("span[name=bgicoright]"));
+	setAutoPlay($("#backgroupDiv"));
+}
+
+var gBSLideIntervalId=null;
+var gBSLideTimeoutId=null;
+function setAutoPlay($obj){
+	gBSLideTimeoutId = setTimeout(function(){
+		gBSLideIntervalId = setInterval(function(){
+			clearTimeout(gBSLideTimeoutId);
+			$obj.find(".next").click();
+		},7000);
+	},5000);
+}
+
+function setGBSLideCor($obj, $left, $right){
+	$obj.slides({
+		generateNextPrev: true,
+		generatePagination: false,
+		fadeSpeed:300,
+		slideSpeed:300,
+		effect:'fade'
+	});
+	
+	$left.bind("click", function(){
+		clearInterval(gBSLideIntervalId);
+		clearTimeout(gBSLideTimeoutId);
+		$obj.find(".prev").click();
+		setAutoPlay($("#backgroupDiv"));
+		return false;
+	});
+	$right.bind("click", function(){
+		clearInterval(gBSLideIntervalId);
+		clearTimeout(gBSLideTimeoutId);
+		$obj.find(".next").click();
+		setAutoPlay($("#backgroupDiv"));
+		return false;
+	});
+}
+</script>
+</head>
+<body>
+<div id="body" style="height:900px; overflow:hidden">
+<div id="backgroupDiv" style="position:absolute; left:0; bottom:0; z-index:-30">
+	<div class="slides_container">
+		<img class="backgroupdImg" src="images/content/6/bg.jpg" />
+		<img class="backgroupdImg" src="images/content/6/bg1.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg2.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg3.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg4.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg5.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg6.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg7.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg8.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg9.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg10.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg11.jpg" style="display:none"/>
+		<img class="backgroupdImg" src="images/content/6/bg12.jpg" style="display:none"/>
+	</div>
+</div>
+<div class="wid_1050 object">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1050" height="360">
+		<param name="movie" value="../img/nav_en.swf" />
+		<param name="wmode" value="transparent">
+		<param name="allowScriptAccess" value="sameDomain" />
+		<embed src="../img/nav_en.swf" quality="high" allowScriptAccess="sameDomain" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="1050" height="360"></embed>
+	</object>
+</div>
+<div class="top"></div>
+
+<span name="bgicoleft" class="bgicoleft"></span>
+<span name="bgicoright" class="bgicoright"></span>
+<div class="clear"></div>
+<div class="bottom">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="950" height="40">
+    <param name="movie" value="../img/bottom_en.swf" />
+    <param name="wmode" value="transparent">
+	<param name="allowScriptAccess" value="sameDomain" />
+    <embed src="../img/bottom_en.swf" quality="high" allowScriptAccess="sameDomain"  pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="950" height="40"></embed>
+  </object>
+</div>
+</div>
+</body>
+</html>
