@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>马奈草地国际俱乐部—近期活动</title>
-<link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
-<link href="../css/jquery.booklet.latest.css" rel="stylesheet" type="text/css" />
 <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 <link href="../css/masu.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/jquery/jquery-1.7.2.min.js"></script>
@@ -12,31 +10,32 @@
 <script type="text/javascript" src="../js/jquery/jquery.mousewheel.min.js"></script>
 <script type="text/javascript" src="../js/jquery/jquery.mCustomScrollbar.js"></script>
 <script type="text/javascript" src="../js/jquery/slides.min.jquery.js"></script>
-<script type="text/javascript" src="../js/jquery/jquery.booklet.latest.min.js"></script>
-<script type="text/javascript" src="../js/jquery/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="../js/manai.js"></script>
 <script language="javascript">
 (function($){
 	$(document).ready(function(){
-		$("#mybook").booklet({
-			width:790,
-			height:285,
-			pageNumbers: true,
-			keyboard: true
-		});
-		$('.fancybox').fancybox();
+		$controlObj = $("#mybook");
+		setImgSlides1($controlObj.find('div[name=slides]'), $controlObj.find("span[name=icoleft]"), $controlObj.find("span[name=icoright]"));
+		$controlObj.find(".slides_container img").show();
 	});
 })(jQuery);
 </script>
 <style>
-.laye3rnew{left: 200px; width:830px; height:400px}
-.laye3rnew .layleft1{width:830px}
-.laye3rnew .content1{width:790px}
+.laye3rnew{left: 200px; width:900px; top: 30px; left: 0px;}
+.laye3rnew .layleft1{width:900px}
+#mybook,#mybook .content_img{height: 615px;}
+#mybook .content_img{padding-top:0px;padding-left: 0px; width: 880px;}
+#mybook .lb_img, .imgwidth870{width:868px}
+#mybook .lb_img, #mybook .slides_container{height: 594px;}
+.laye3rnew .icoleft, .laye3rnew .icoleft_no{right:931px}
+.laye3rnew .icoright, .laye3rnew .icoright_no{right:17px}
+.content_img span{margin-top:285px}
 </style>
 </head>
 <body>
 <div id="body" style="height:700px; overflow:hidden">
 <img id="backgroupdImg" style="position:absolute; left:0; bottom:0; z-index:-30" src="images/bg.jpg" width="100%" />
+<!--
 <div class="wid_1050 object">
   <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1050" height="360">
     <param name="movie" value="../img/nav.swf" />
@@ -46,42 +45,34 @@
   </object>
 </div>
 <div class="top"></div>
-
+-->
 <div class="wid_950">
 	<div class="layer layer_3 laye3rnew">
-		<div class="layleft1">
-		<h2>近期活动</h2>
-		<div id="mybook">
-			<div class="content1">
-				<a class="fancybox" href="images/content/3/29/250_1.jpg"><img src="images/content/3/29/250_1.jpg" class="imgwidth220" /></a>
-			</div>
-			<div class="content1">
-				<a class="fancybox" href="images/content/3/30/250_1.jpg"><img src="images/content/3/30/250_1.jpg" class="imgwidth220" /></a>
-			</div>
-			<div class="content1">
-				<a class="fancybox" href="images/content/3/31/250_1.jpg"><img src="images/content/3/31/250_1.jpg" class="imgwidth220" /></a>
-			</div>
-			<div class="content1">
-				<a class="fancybox" href="images/content/3/32/250_1.jpg"><img src="images/content/3/32/250_1.jpg" class="imgwidth220" /></a>
-			</div>
-			<div class="content1">
-				<a class="fancybox" href="images/content/3/32/250_1.jpg"><img src="images/content/3/32/250_1.jpg" class="imgwidth220" /></a>
-			</div>
-		</div>
+		<div id="mybook" class="layleft1">
+			<div class="content_img flo_l">
+				<span name="icoleft" class="icoleft"></span>
+				<div name="slides" class="lb_img" style="overflow:hidden;">
+					<div class="slides_container">
+						<a href="#"><img src="images/content/4/1/09-10.jpg" class="imgwidth870" /></a>
+						<a href="#"><img src="images/content/4/1/11-12.jpg" class="imgwidth870" style="display:none" /></a>
+						<a href="#"><img src="images/content/4/1/13-14.jpg" class="imgwidth870" style="display:none" /></a>
+						<a href="#"><img src="images/content/4/1/15-16.jpg" class="imgwidth870" style="display:none" /></a>
+						</div>
+					</div>
+					<span name="icoright" class="icoright"></span>
+				</div>
 		</div>
 	</div>
 </div>
 <div class="clear"></div>
 <div class="bottom">
-  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="950" height="40">
-    <param name="movie" value="../img/bottom.swf" />
-    <param name="wmode" value="transparent">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="950" height="40">
+	<param name="movie" value="../img/bottom.swf" />
+	<param name="wmode" value="transparent">
 	<param name="allowScriptAccess" value="sameDomain" />
-    <embed src="../img/bottom.swf" quality="high" allowScriptAccess="sameDomain"  pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="950" height="40"></embed>
-  </object>
+	<embed src="../img/bottom.swf" quality="high" allowScriptAccess="sameDomain"  pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent" width="950" height="40"></embed>
+	</object>
 </div>
 </div>
-  
-
 </body>
 </html>
