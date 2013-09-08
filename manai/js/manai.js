@@ -234,17 +234,22 @@ function scrollObj($obj){
 /**
 设置图片切换
 */
-function setImgSlides1($obj, $left, $right){
+function setImgSlides1($obj, $left, $right, param){
 	if($obj.find(".next").length > 0){
 		return;
 	}
 	if($obj.find("img").length < 2){
 		return;
 	}
-	$obj.slides({
-		generateNextPrev: true,
-		generatePagination: false
-	});
+	
+	if (typeof(param)=="undefined"){
+		param = {
+			generateNextPrev: true,
+			generatePagination: false
+		};
+	}
+	
+	$obj.slides(param);
 	setBtn(-1);
 	$left.bind("click", function(){
 		if(!($obj.find("img").index($obj.find("img:visible")) <= 0)){
@@ -485,14 +490,18 @@ function setAutoPlay($obj){
 	},5000);
 }
 
-function setGBSLideCor($obj, $left, $right){
-	$obj.slides({
-		generateNextPrev: true,
-		generatePagination: false,
-		fadeSpeed:300,
-		slideSpeed:300,
-		effect:'fade'
-	});
+function setGBSLideCor($obj, $left, $right, param){
+	if (typeof(param)=="undefined"){
+		param = {
+			generateNextPrev: true,
+			generatePagination: false,
+			fadeSpeed:300,
+			slideSpeed:300,
+			effect:'fade'
+		};
+	}
+	
+	$obj.slides(param);
 	
 	$left.bind("click", function(){
 		clearInterval(gBSLideIntervalId);
@@ -680,4 +689,53 @@ function checkIE6(){
 	if (/MSIE [56]/.test(nav)) 
 		return true;
 	return false;
+}
+
+function popBook(booklist, startNum){
+	if($("#mybookParent").length > 0){
+		$("#mybookParent").remove();
+	}
+
+	var $hideobj = $(".wid_950 div:eq(0), .wid_1050")
+	var $contain = $(".wid_950");
+
+	var booktemplet = $('<div class="layer layebook" id="mybookParent">\
+		<div id="mybook" class="layleft1">\
+		<div class="content_img flo_l">\
+			<span name="icoleft" class="icoleft"></span>\
+			<div name="slides" class="lb_img" style="overflow:hidden;"><div class="slides_container"></div></div>\
+			<span name="icoright" class="icoright"></span>\
+		</div>\
+		</div>\
+		<div id="return"><a href="#">返回</a></div>\
+		</div>');
+	booktemplet.find("#return a").bind("click", function(){
+		$("#mybookParent").remove();
+		$hideobj.show();
+		return false;
+	});
+	
+	var $book=booktemplet.clone(true);
+	$.each(booklist, function(i, n){
+		if (i==0){
+			$book.find('.slides_container').append('<a href="#"><img src="'+n+'" class="imgwidth870" /></a>');
+		}else{
+			$book.find('.slides_container').append('<a href="#"><img src="'+n+'" class="imgwidth870" style="display:none" /></a>');
+		}
+	});
+	
+
+	$hideobj.hide();
+	$contain.append($book);
+	
+	$controlObj = $book.find("#mybook");
+	
+	param = {
+		generateNextPrev: true,
+		generatePagination: false,
+		start: startNum
+	};
+	
+	setImgSlides1($controlObj.find('div[name=slides]'), $controlObj.find("span[name=icoleft]"), $controlObj.find("span[name=icoright]"), param);
+	$controlObj.find(".slides_container img").show();
 }

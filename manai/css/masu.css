@@ -296,3 +296,13 @@ a:hover{color:#c9a95e !important; text-decoration:none;}
 	background:#09C;
 }
 */
+
+.layebook{left: 200px; width:900px; top: 30px; left: 0px;}
+.layebook .layleft1{width:900px}
+#mybook,#mybook .content_img{height: 615px;}
+#mybook .content_img{padding-top:0px;padding-left: 0px; width: 880px;}
+#mybook .lb_img, .imgwidth870{width:868px}
+#mybook .lb_img, #mybook .slides_container{height: 594px;}
+.layebook .icoleft, .layebook .icoleft_no{right:931px}
+.layebook .icoright, .layebook .icoright_no{right:17px}
+#mybook .content_img span{margin-top:285px}
