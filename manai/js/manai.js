@@ -695,10 +695,11 @@ function popBook(booklist, startNum){
 	if($("#mybookParent").length > 0){
 		$("#mybookParent").remove();
 	}
-
+	//设置隐藏的obj
 	var $hideobj = $(".wid_950 div:eq(0), .wid_1050")
+	//div的展示容器
 	var $contain = $(".wid_950");
-
+	//模板
 	var booktemplet = $('<div class="layer layebook" id="mybookParent">\
 		<div id="mybook" class="layleft1">\
 		<div class="content_img flo_l">\
@@ -707,14 +708,17 @@ function popBook(booklist, startNum){
 			<span name="icoright" class="icoright"></span>\
 		</div>\
 		</div>\
+		<div class="nav clear"></div>\
 		<div id="return"><a href="#">返回</a></div>\
 		</div>');
+	//绑定返回事件
 	booktemplet.find("#return a").bind("click", function(){
 		$("#mybookParent").remove();
 		$hideobj.show();
 		return false;
 	});
 	
+	// 创造出一个图书对象，然后设置图片内容，并展示出来
 	var $book=booktemplet.clone(true);
 	$.each(booklist, function(i, n){
 		if (i==0){
@@ -723,19 +727,22 @@ function popBook(booklist, startNum){
 			$book.find('.slides_container').append('<a href="#"><img src="'+n+'" class="imgwidth870" style="display:none" /></a>');
 		}
 	});
-	
-
 	$hideobj.hide();
 	$contain.append($book);
 	
-	$controlObj = $book.find("#mybook");
 	
+	//绑定图书翻页效果
+	$controlObj = $book.find("#mybook");
 	param = {
 		generateNextPrev: true,
-		generatePagination: false,
+		generatePagination: true,
 		start: startNum
 	};
-	
 	setImgSlides1($controlObj.find('div[name=slides]'), $controlObj.find("span[name=icoleft]"), $controlObj.find("span[name=icoright]"), param);
 	$controlObj.find(".slides_container img").show();
+	$book.find(".nav").append($controlObj.find(".pagination").clone(true));
+	$book.find(".nav .pagination li a").bind("click", function(){
+		$(this).parent().parent().find("li").removeClass();
+		$(this).parent().addClass("current");
+	});
 }

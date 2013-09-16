@@ -306,3 +306,7 @@ a:hover{color:#c9a95e !important; text-decoration:none;}
 .layebook .icoleft, .layebook .icoleft_no{right:931px}
 .layebook .icoright, .layebook .icoright_no{right:17px}
 #mybook .content_img span{margin-top:285px}
+
+#mybookParent .pagination {height:18px;text-align:center;vertical-align:middle;list-style:none;}
+#mybookParent .nav {height:18px;width:900px; margin-left:50%; left: 450;}
+#mybookParent .pagination li {width:20px; float:left;display:inline;}
