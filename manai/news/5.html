@@ -27,10 +27,11 @@
 			$(this).find(".slides_container a").attr("imggroup", id);
 		});
 		$("#href4 .slides_container a").attr("imggroup", 4);
-		setPageForNews($("#themeactivitiesUl"), 175);
-		$("div[id^=href] ul li a").bind("click", function(){
-			popBook(['images/content/4/1/09-10.jpg','images/content/4/1/11-12.jpg','images/content/4/1/13-14.jpg','images/content/4/1/15-16.jpg'], $(this).attr("pos"));
-			return false;
+		setPageForNews($("#themeactivitiesUl"), 175, function(){
+			$("div[id^=href]").find(".slides_container a").bind("click", function(){
+				popBook(['images/content/4/1/09-10.jpg','images/content/4/1/11-12.jpg','images/content/4/1/13-14.jpg','images/content/4/1/15-16.jpg'], $(this).attr("pos"));
+				return false;
+			});
 		});
 	});
 })(jQuery);

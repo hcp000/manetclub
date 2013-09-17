@@ -111,7 +111,7 @@ function setPage2($navigator,$imgobjectDiv, height){
 }
 
 
-function setPageForNews($menu3,  height){
+function setPageForNews($menu3,  height, func){
 	//设置4级菜单
 	var $menu4 = $(".menu4");
 	$menu4.find("a").bind("click", function(){
@@ -157,7 +157,14 @@ function setPageForNews($menu3,  height){
 		return false;
 	});
 	$menu3.find("a").eq(0).click();
-	setslidesContainerAEvent($("div[id^=href]"));
+	
+	if (typeof(func)=="function"){
+		func();
+	} else {
+		setslidesContainerAEvent($("div[id^=href]"));
+	}
+	
+	
 	$(".slides_container img").show();
 }
 
